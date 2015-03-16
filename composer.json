@@ -2,6 +2,7 @@
     "name": "binarykitten/zf2authwordpress",
     "description": "Wordpress Authentication Adapter for Zend Framework 2",
     "require": {
+        "php": ">=5.5",
         "zendframework/zend-authentication": "dev-master"
     },
     "license": "MIT",
