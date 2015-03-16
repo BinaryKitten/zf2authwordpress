@@ -4,9 +4,12 @@
   "type": "library",
   "license": "MIT",
   "keywords": [
-    "framework",
-    "micro",
-    "zf2"
+    "auth",
+    "wordpress",
+    "zf2",
+    "authentication",
+    "auth adapter",
+    "authentication adapter"
   ],
   "homepage": "https://github.com/BinaryKitten/zf2authwordpress",
   "authors": [
