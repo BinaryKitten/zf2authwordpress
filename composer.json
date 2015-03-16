@@ -1,15 +1,30 @@
 {
-    "name": "binarykitten/zf2authwordpress",
-    "description": "Wordpress Authentication Adapter for Zend Framework 2",
-    "require": {
-        "php": ">=5.5",
-        "zendframework/zend-authentication": "dev-master"
+  "name": "binarykitten/zf2authwordpress",
+  "description": "Zend Framework 2 Authentication Adapter for WordPress",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "framework",
+    "micro",
+    "zf2"
+  ],
+  "homepage": "https://github.com/BinaryKitten/zf2authwordpress",
+  "authors": [
+    {
+      "name": "Kathryn Reeve",
+      "email": "kathryn@binarykitten.com",
+      "homepage": "http://binarykitten.com/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "zendframework/zendframework": "2.3.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "ZF2AuthWordPress": "src/"
     },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Kathryn Reeve",
-            "email": "kathryn@BinaryKitten.com"
-        }
-    ]
+    "classmap": ["Module.php"]
+  }
 }
