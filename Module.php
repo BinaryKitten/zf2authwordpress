@@ -83,29 +83,11 @@ class Module
 
     public function wp_authenticate($hash, $password, ServiceManager $sm)
     {
-//        define('AUTH_SALT',        '=G~86 ^.N$CD>7UGQT<&btZ(q+H/uC=Z3%E,VX:bV/`Pfsy)6p5+6F^a!}+vX|1_');
-//        define('SECURE_AUTH_SALT', '0/A!S+4T#-P!VMMY,DI7[)LK7I2<JF`7ZfH];4J|iyDfqR52@wZeKKT+^_xA0MN,');
         /** @var PasswordHash $wp_hasher */
-//        $wp_hasher = $sm->get(PasswordHash::class);
         $wp_hasher = $sm->get('wp_hasher');
-        $hash2 = $wp_hasher->HashPassword( trim($password));
 
         $result = $wp_hasher->CheckPassword($password, $hash);
-        $result2 = $wp_hasher->CheckPassword($password, $hash2);
-        \Zend\Debug\Debug::dump($password);
-        \Zend\Debug\Debug::dump($hash);
-        \Zend\Debug\Debug::dump($hash2);
-        \Zend\Debug\Debug::dump($result);
-        \Zend\Debug\Debug::dump($result2);
-                die();
-//        return $result;
+        return $result;
     }
 
-    public function onBootstrap(MvcEvent $event)
-    {
-        $eventManager = $event->getApplication()->getEventManager();
-        $eventManager->attach('sendTweet', function($e) {
-            var_dump($e);
-        }, 100);
-    }
 }
